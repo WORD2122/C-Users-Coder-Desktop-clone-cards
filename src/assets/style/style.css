@@ -1,38 +1,94 @@
-.contenedor-ciudades {
-    width: 1170px;
-    height: 368px;
-    margin: 10px 10px 50px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Contenedor general que agrupa las 5 tarjetas (NUEVO para alinearlas) */
+.seccion-ciudades {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre cada tarjeta */
+}
+
+/* Tu contenedor principal (corregido a diseño responsivo) */
+.contenedor-ciudades {
+    width: 100%; /* Ocupa el ancho disponible en pantallas chicas */
+    max-width: 1170px; /* Tu ancho original como límite máximo */
+    min-height: 368px; /* Altura mínima en vez de fija para que no se desborde el texto */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Imagen a un lado, texto al otro */
     align-items: center;
-    justify-content: center;
     background-color: #fff;
     box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Contenedor interno de la imagen para controlar su tamaño */
+.contenedor-imagen-ciudades {
+    width: 40%; /* La imagen toma el 40% del ancho de la tarjeta */
+    height: 368px;
 }
 
 .imagen-ciudades {
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover; /* Evita que la foto de la ciudad se deforme */
 }
 
+/* Contenedor de los textos */
 .contenedor-texto-ciudades {
-    text-align: center;
+    width: 60%; /* El texto toma el 60% restante */
+    text-align: left; /* Cambiado a la izquierda para mejor lectura con el justify */
     padding: 40px;
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.5em;
 }
 
 .nombre-ciudades {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 700;
 }
 
+/* Reutilizando tu clase de cargo para el País de la ciudad */
 .cargo-testimonio {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    padding-bottom: 30px;
+    font-size: 1.1rem;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .texto-testimonio {
     font-size: 1.1rem;
-    text-align: justify;
+    text-align: justify; /* Corregido el texto sobrante que tenías aquí */
+    color: #555;
+}
+
+/* --- EXTRA: DISEÑO RESPONSIVO (Para celulares) --- */
+@media (max-width: 768px) {
+    .contenedor-ciudades {
+        flex-direction: column; /* En celulares, la imagen va arriba y el texto abajo */
+        height: auto;
+    }
+    .contenedor-imagen-ciudades, 
+    .contenedor-texto-ciudades {
+        width: 100%;
+    }
+    .contenedor-imagen-ciudades {
+        height: 250px;
+    }
 }
