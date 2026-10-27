@@ -12,8 +12,10 @@ export default function Tarjeta({ foto, nombre, pais, descripcion }) {
       </div>
       <div className="contenedor-texto-ciudades">
         <h2 className="nombre-ciudades">{nombre}</h2>
-        <p className="cargo-testimonio">{pais}</p>
-        <p className="texto-testimonio">{descripcion}</p>
+        {/* Cambiado de .cargo-testimonio a .pais-ciudad */}
+        <p className="pais-ciudad">{pais}</p>
+        {/* Cambiado de .texto-testimonio a .descripcion-ciudad */}
+        <p className="descripcion-ciudad">{descripcion}</p>
       </div>
     </div>
   );
