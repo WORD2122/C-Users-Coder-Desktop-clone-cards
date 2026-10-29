@@ -21,8 +21,7 @@ La estructura principal del código fuente está organizada de la siguiente mane
 src/
 ├── components/
 │   ├── Tarjeta.jsx
-│   ├── Navbar.jsx    *(Extra)*
-│   └── Footer.jsx    *(Extra)*
+│  
 ├── App.jsx
 ├── App.css
 ├── index.css
