@@ -56,8 +56,7 @@ export default Tarjeta;
 ```jsx
 import React from 'react';
 import Tarjeta from './components/Tarjeta';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+
 import './App.css';
 
 function App() {
